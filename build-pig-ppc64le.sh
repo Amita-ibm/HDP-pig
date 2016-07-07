@@ -26,3 +26,6 @@ for build_file in contrib/piggybank/java/build.xml ; do
 done
 ant $BUILD_OPTS tar "$@"
 
+cd build
+mvn install:install-file -Dfile=pig-0.15.1-ppc64le.jar -DgroupId=org.apache.org -DartifactId=pig -Dversion=1.15.1 -Dpackaging=jar
+cd ..
