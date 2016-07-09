@@ -18,7 +18,7 @@ export ANT_OPTS="-Xmx4096m"
 tar xf  $HOME/.m2/repository/apache-forrest/apache-forrest-0.9.tar.gz
 export FORREST_HOME=`pwd`/apache-forrest-0.9
 
-BUILD_OPTS="-Dversion=0.15.1-ppc64le  -Dforrest.home=${FORREST_HOME}  -Dhadoopversion=23"
+BUILD_OPTS="-Dversion=0.15.1  -Dforrest.home=${FORREST_HOME}  -Dhadoopversion=23"
 
 ant $BUILD_OPTS clean published pigunit-jar smoketests-jar javadoc "$@"
 for build_file in contrib/piggybank/java/build.xml ; do
@@ -27,5 +27,5 @@ done
 ant $BUILD_OPTS tar "$@"
 
 cd build
-mvn install:install-file -Dfile=pig-0.15.1-ppc64le.jar -DgroupId=org.apache.org -DartifactId=pig -Dversion=1.15.1 -Dpackaging=jar
+mvn install:install-file -Dfile=pig-0.15.1.jar -DgroupId=org.apache.org -DartifactId=pig -Dversion=1.15.1 -Dpackaging=jar
 cd ..
