@@ -27,5 +27,5 @@ done
 ant $BUILD_OPTS tar "$@"
 
 cd build
-mvn install:install-file -Dfile=pig-0.15.1.jar -DgroupId=org.apache.org -DartifactId=pig -Dversion=1.15.1 -Dpackaging=jar
+mvn install:install-file -Dfile=pig-0.15.1.jar -DgroupId=org.apache.pig -DartifactId=pig -Dversion=0.15.1 -Dpackaging=jar -Dclassifier=h2
 cd ..
